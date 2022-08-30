@@ -33,8 +33,8 @@ struct NowPlayingBar: View {
         ZStack() {
             Rectangle()
                 .frame(width: UIScreen.screenWidth, height: 90)
-                .foregroundColor(Color.white.opacity(0.5))
-            .background(.ultraThinMaterial)
+                .foregroundColor(Color.white.opacity(0.0))
+                .background(.ultraThinMaterial).opacity(0.5)
             HStack {
                 Button(action: {}) {
                     HStack {
@@ -43,7 +43,8 @@ struct NowPlayingBar: View {
                             .frame(width: 45, height: 45)
                             .shadow(radius: 6)
                             .padding(.leading, 20)
-                        Text("Taylor Swift")
+                        Text("Some artist")
+                            .font(.headline)
                             .padding(.leading, 20)
                         Spacer()
                     }
@@ -79,6 +80,7 @@ struct VisualEffectView: UIViewRepresentable {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }
 

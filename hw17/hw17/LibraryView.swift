@@ -1,34 +1,26 @@
 import SwiftUI
 
 struct LibraryView: View {
-    @State var editLibrary = true
+    @State var editLibrary = false
     var body: some View {
         NavigationView {
             if editLibrary {
                 EditLibrary()
-                    .toolbar {
-                        NavigationLink {} label: {
-                            Button(action: {
-                                editLibrary.toggle()
-                                
-                            }) {
-                                Text("Готово")
-                                    .foregroundColor(.red)
-                            }
-                        }
-                    }
+                    .environment(\.editMode, .constant(EditMode.active))
+                    .navigationBarItems(trailing: Button(action: {
+                        editLibrary.toggle()
+                    }) {
+                        Text("Готово")
+                            .foregroundColor(.red)
+                    })
             } else {
                 MainLibrary()
-                    .toolbar {
-                        NavigationLink {} label: {
-                            Button(action: {
-                                editLibrary.toggle()
-                            }) {
-                                Text("Править")
-                                    .foregroundColor(.red)
-                            }
-                        }
-                    }
+                    .navigationBarItems(trailing: Button(action: {
+                        editLibrary.toggle()
+                    }) {
+                        Text("Править")
+                            .foregroundColor(.red)
+                    })
             }
         }
     }
@@ -50,52 +42,51 @@ struct MainLibrary: View {
 }
 
 struct EditLibrary: View {
-    @State var selectedItems = Set<UUID>()
-    let libraryItems = ["1","2","3","4","5","6","7","8","9","10","11"]
-    @State var selections: [String] = []
+    @State var selectedItems = Set<String>()
+    
     var body: some View {
         List(selection: $selectedItems) {
-            ForEach(libraryItems, id: \.self) { item in
-                MultipleSelectionRow(title: item, isSelected: selections.contains(item)) {
-                    if self.selections.contains(item) {
-                        self.selections.removeAll(where: { $0 == item })
-                    }
-                    else {
-                        self.selections.append(item)
-                    }
+            ForEach(LibraryData.libraryData) { item in
+                HStack {
+                    Image(systemName: item.nameImage)
+                        .foregroundColor(.red)
+                    Text(item.name)
                 }
             }
+            .onMove { (indexSet, index) in
+                LibraryData.libraryData.move(fromOffsets: indexSet, toOffset: index)
+            }
         }
+        .listStyle(.inset)
         .navigationTitle("Медиатека")
     }
 }
 
-struct MultipleSelectionRow: View {
-    var title: String
-    var isSelected: Bool
-    var action: () -> Void
+struct LibraryData: Identifiable {
+    let name: String
+    let nameImage: String
+    var id: String { name }
+}
 
-    var body: some View {
-        Button(action: self.action) {
-            HStack {
-                if self.isSelected {
-                    Text(self.title)
-                        .foregroundColor(.black)
-                    Spacer()
-                    Image(systemName: "checkmark")
-                        .listRowBackground(Color.red)
-                } else {
-                    Text(self.title)
-                        .foregroundColor(.black)
-                }
-            }
-        }
-    }
+extension LibraryData {
+    static var libraryData: [LibraryData] = [
+        LibraryData(name: "Плейлисты", nameImage: "music.note.list"),
+        LibraryData(name: "Артисты", nameImage: "music.mic"),
+        LibraryData(name: "Альбомы", nameImage: "square.stack"),
+        LibraryData(name: "Песни", nameImage: "music.note"),
+        LibraryData(name: "Телешоу и фильмы", nameImage: "tv"),
+        LibraryData(name: "Видеоклипы", nameImage: "music.note.tv"),
+        LibraryData(name: "Жанры", nameImage: "guitars"),
+        LibraryData(name: "Сборники", nameImage: "person.2.crop.square.stack"),
+        LibraryData(name: "Авторы", nameImage: "music.quarternote.3"),
+        LibraryData(name: "Загружено", nameImage: "arrow.down.circle"),
+        LibraryData(name: "Домашняя коллекция", nameImage: "music.note.house")]
 }
 
 struct LibraryView_Previews: PreviewProvider {
     static var previews: some View {
         LibraryView()
+            .preferredColorScheme(.dark)
     }
 }
 
