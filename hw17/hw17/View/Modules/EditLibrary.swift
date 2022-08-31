@@ -6,11 +6,7 @@ struct EditLibrary: View {
     var body: some View {
         List(selection: $selectedItems) {
             ForEach(LibraryData.libraryData) { item in
-                HStack {
-                    Image(systemName: item.nameImage)
-                        .foregroundColor(.red)
-                    Text(item.name)
-                }
+                ListItem(nameImage: item.nameImage, name: item.name, isSelect: selectedItems.contains(item.name))
             }
             .onMove { (indexSet, index) in
                 LibraryData.libraryData.move(fromOffsets: indexSet, toOffset: index)
@@ -24,5 +20,24 @@ struct EditLibrary: View {
 struct EditLibrary_Previews: PreviewProvider {
     static var previews: some View {
         EditLibrary()
+    }
+}
+
+struct ListItem: View {
+    var nameImage: String
+    var name: String
+    var isSelect: Bool
+    
+    var body: some View {
+        HStack {
+            Image(systemName: nameImage)
+                .foregroundColor(.red)
+            if isSelect {
+                Text(name)
+                    .bold()
+            } else {
+                Text(name)
+            }
+        }
     }
 }
