@@ -37,6 +37,5 @@ extension TabsView {
         static let media = "Медиатека"
         static let radio = "Радио"
         static let search = "Поиск"
-        
     }
 }
