@@ -39,6 +39,7 @@ struct RadioStationsView: View {
                    .foregroundColor(.accentColor)
                     Divider()
                 }
+                Spacer(minLength: 100)
             }
         }
     }
