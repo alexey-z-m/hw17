@@ -11,6 +11,16 @@
 		BADD53AA28BCFFDC0084419D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD53A928BCFFDC0084419D /* ContentView.swift */; };
 		BADD53AC28BCFFDE0084419D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BADD53AB28BCFFDE0084419D /* Assets.xcassets */; };
 		BADD53AF28BCFFDE0084419D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BADD53AE28BCFFDE0084419D /* Preview Assets.xcassets */; };
+		BADD53B628BDE5E30084419D /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD53B528BDE5E30084419D /* LibraryView.swift */; };
+		BADD53B828BE75A60084419D /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD53B728BE75A60084419D /* TabsView.swift */; };
+		BADD53BA28BE76550084419D /* NowPlayingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD53B928BE76550084419D /* NowPlayingBar.swift */; };
+		BADD53BC28BE78010084419D /* MainLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD53BB28BE78010084419D /* MainLibrary.swift */; };
+		BADD53BE28BE78410084419D /* EditLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD53BD28BE78410084419D /* EditLibrary.swift */; };
+		BADD53C028BE78640084419D /* LibraryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD53BF28BE78630084419D /* LibraryData.swift */; };
+		BADD53E228C6126F0084419D /* RadioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD53E128C6126F0084419D /* RadioData.swift */; };
+		BADD53E728C612880084419D /* RadioStationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD53E428C612880084419D /* RadioStationsView.swift */; };
+		BADD53E828C612880084419D /* TopRadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD53E528C612880084419D /* TopRadioView.swift */; };
+		BADD53E928C612880084419D /* RadioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD53E628C612880084419D /* RadioView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +29,16 @@
 		BADD53A928BCFFDC0084419D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BADD53AB28BCFFDE0084419D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BADD53AE28BCFFDE0084419D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BADD53B528BDE5E30084419D /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		BADD53B728BE75A60084419D /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+		BADD53B928BE76550084419D /* NowPlayingBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingBar.swift; sourceTree = "<group>"; };
+		BADD53BB28BE78010084419D /* MainLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLibrary.swift; sourceTree = "<group>"; };
+		BADD53BD28BE78410084419D /* EditLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLibrary.swift; sourceTree = "<group>"; };
+		BADD53BF28BE78630084419D /* LibraryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryData.swift; sourceTree = "<group>"; };
+		BADD53E128C6126F0084419D /* RadioData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioData.swift; sourceTree = "<group>"; };
+		BADD53E428C612880084419D /* RadioStationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioStationsView.swift; sourceTree = "<group>"; };
+		BADD53E528C612880084419D /* TopRadioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRadioView.swift; sourceTree = "<group>"; };
+		BADD53E628C612880084419D /* RadioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +57,7 @@
 			children = (
 				BADD53A628BCFFDC0084419D /* hw17 */,
 				BADD53A528BCFFDC0084419D /* Products */,
+				BADD53E028C610EF0084419D /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,8 +72,9 @@
 		BADD53A628BCFFDC0084419D /* hw17 */ = {
 			isa = PBXGroup;
 			children = (
-				BADD53A728BCFFDC0084419D /* hw17App.swift */,
 				BADD53A928BCFFDC0084419D /* ContentView.swift */,
+				BADD53C128BE79A10084419D /* App */,
+				BADD53C228BE79AE0084419D /* View */,
 				BADD53AB28BCFFDE0084419D /* Assets.xcassets */,
 				BADD53AD28BCFFDE0084419D /* Preview Content */,
 			);
@@ -66,6 +88,71 @@
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
+		};
+		BADD53C128BE79A10084419D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BADD53A728BCFFDC0084419D /* hw17App.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BADD53C228BE79AE0084419D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BADD53C428BE7A090084419D /* Models */,
+				BADD53C328BE79DD0084419D /* Modules */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BADD53C328BE79DD0084419D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BADD53E328C612880084419D /* Radio */,
+				BADD53CE28C5CA650084419D /* Media */,
+				BADD53B728BE75A60084419D /* TabsView.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		BADD53C428BE7A090084419D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BADD53BF28BE78630084419D /* LibraryData.swift */,
+				BADD53E128C6126F0084419D /* RadioData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BADD53CE28C5CA650084419D /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				BADD53B528BDE5E30084419D /* LibraryView.swift */,
+				BADD53B928BE76550084419D /* NowPlayingBar.swift */,
+				BADD53BB28BE78010084419D /* MainLibrary.swift */,
+				BADD53BD28BE78410084419D /* EditLibrary.swift */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		BADD53E028C610EF0084419D /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		BADD53E328C612880084419D /* Radio */ = {
+			isa = PBXGroup;
+			children = (
+				BADD53E428C612880084419D /* RadioStationsView.swift */,
+				BADD53E528C612880084419D /* TopRadioView.swift */,
+				BADD53E628C612880084419D /* RadioView.swift */,
+			);
+			name = Radio;
+			path = hw17/View/Modules/Radio;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -138,7 +225,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				BADD53AA28BCFFDC0084419D /* ContentView.swift in Sources */,
+				BADD53B628BDE5E30084419D /* LibraryView.swift in Sources */,
+				BADD53B828BE75A60084419D /* TabsView.swift in Sources */,
+				BADD53E928C612880084419D /* RadioView.swift in Sources */,
+				BADD53C028BE78640084419D /* LibraryData.swift in Sources */,
+				BADD53E828C612880084419D /* TopRadioView.swift in Sources */,
+				BADD53E228C6126F0084419D /* RadioData.swift in Sources */,
+				BADD53BE28BE78410084419D /* EditLibrary.swift in Sources */,
+				BADD53BA28BE76550084419D /* NowPlayingBar.swift in Sources */,
 				BADD53A828BCFFDC0084419D /* hw17App.swift in Sources */,
+				BADD53BC28BE78010084419D /* MainLibrary.swift in Sources */,
+				BADD53C028BE78640084419D /* LibraryData.swift in Sources */,
+				BADD53BE28BE78410084419D /* EditLibrary.swift in Sources */,
+				BADD53BA28BE76550084419D /* NowPlayingBar.swift in Sources */,
+				BADD53E728C612880084419D /* RadioStationsView.swift in Sources */,
+				BADD53A828BCFFDC0084419D /* hw17App.swift in Sources */,
+				BADD53BC28BE78010084419D /* MainLibrary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
