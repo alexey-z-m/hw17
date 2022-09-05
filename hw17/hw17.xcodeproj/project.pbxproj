@@ -127,6 +127,7 @@
 		BADD53CE28C5CA650084419D /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				BADD53B728BE75A60084419D /* TabsView.swift */,
 				BADD53B528BDE5E30084419D /* LibraryView.swift */,
 				BADD53B928BE76550084419D /* NowPlayingBar.swift */,
 				BADD53BB28BE78010084419D /* MainLibrary.swift */,
@@ -143,6 +144,17 @@
 				BADD53D228C5CD230084419D /* RadioStationsView.swift */,
 			);
 			path = Radio;
+      
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		BADD53C428BE7A090084419D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BADD53BF28BE78630084419D /* LibraryData.swift */,
+			);
+			path = Models;
+      
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,6 +239,12 @@
 				BADD53A828BCFFDC0084419D /* hw17App.swift in Sources */,
 				BADD53BC28BE78010084419D /* MainLibrary.swift in Sources */,
 				BADD53D728C5D3FC0084419D /* RadioData.swift in Sources */,
+				BADD53C028BE78640084419D /* LibraryData.swift in Sources */,
+				BADD53BE28BE78410084419D /* EditLibrary.swift in Sources */,
+				BADD53BA28BE76550084419D /* NowPlayingBar.swift in Sources */,
+				BADD53A828BCFFDC0084419D /* hw17App.swift in Sources */,
+				BADD53BC28BE78010084419D /* MainLibrary.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
